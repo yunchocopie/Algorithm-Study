@@ -12,7 +12,7 @@ int main()
 
 	int N = 0;
 	int M = 0;
-	string tmp;
+	string name;
 	string dogam[100001];
 	int i = 0;
 	int j = 0;
@@ -23,23 +23,23 @@ int main()
 	
 	for(i = 0; i < N; i++)
 	{
-		cin >> tmp;
-		m.insert(make_pair(tmp, i + 1));
-		dogam[i + 1] = tmp;
+		cin >> name;
+		m.insert(make_pair(name, i + 1));
+		dogam[i + 1] = name;
 	}
 	
 	for(i = 0; i < M; i++)
 	{
-		cin >> tmp;
+		cin >> name;
 		
-		if(isdigit(tmp[0]))
+		if(isdigit(name[0]))
 		{
-			cout << dogam[stoi(tmp)] << "\n";
+			cout << dogam[stoi(name)] << "\n";
 		}
 
         else 
         {
-        	cout << m.find(tmp)->second << "\n";
+        	cout << m.find(name)->second << "\n";
 		}
 	}
 }
