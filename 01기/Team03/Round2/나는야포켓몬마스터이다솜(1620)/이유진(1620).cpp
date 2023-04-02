@@ -9,32 +9,32 @@ using namespace std;
 string Pocketmon[100000];   
 
 int main()
-{	cin.tie(0);      //½Ã°£ÃÊ°úÇØ°á  
-	ios::sync_with_stdio(0);    //½Ã°£ÃÊ°ú ÇØ°á
+{	cin.tie(0);      //ì‹œê°„ì´ˆê³¼í•´ê²°  
+	ios::sync_with_stdio(0);    //ì‹œê°„ì´ˆê³¼ í•´ê²°
 	
-	map<string, int>mapset;    //mapÇÔ¼ö¸¦ ¼±¾ğÇÑ´Ù.   
+	map<string, int>mapset;    //mapí•¨ìˆ˜ë¥¼ ì„ ì–¸í•œë‹¤.   
 	int N, M;
-	string Input; //ÀÔ·Â¹Ş´Â ÀÌ¸§  
-	int InputNum;  //ÀÔ·Â¹Ş´Â ¼ıÀÚ  
+	string Input; //ì…ë ¥ë°›ëŠ” ì´ë¦„  
+	int InputNum;  //ì…ë ¥ë°›ëŠ” ìˆ«ì  
 	  
-	cin >> N >> M;   //N°ú MÀ» ÀÔ·Â ¹Ş´Â´Ù.
+	cin >> N >> M;   //Nê³¼ Mì„ ì…ë ¥ ë°›ëŠ”ë‹¤.
 	
 	for(int i=0; i < N; i++)
 	{ 
-		cin >> Pocketmon[i];  //N¹ø µ¹¾Æ°¡¸é¼­ Æ÷ÄÏ¸ó ÀÌ¸§À» ¹Ş´Â´Ù.  
+		cin >> Pocketmon[i];  //Në²ˆ ëŒì•„ê°€ë©´ì„œ í¬ì¼“ëª¬ ì´ë¦„ì„ ë°›ëŠ”ë‹¤.  
 		mapset.insert({Pocketmon[i], i});
 	} 
 	
 	for(int i=0; i<M; i++)
 	{		
-		cin >> Input;       //¾î¶²°ªÀ» ÀÔ·Â¹Ş´Â´Ù.
-		//1.Æ÷ÄÏ¸ó ¼ıÀÚ  >> Æ÷ÄÏ¸óÀÌ¸§   
+		cin >> Input;       //ì–´ë–¤ê°’ì„ ì…ë ¥ë°›ëŠ”ë‹¤.
+		//1.í¬ì¼“ëª¬ ìˆ«ì  >> í¬ì¼“ëª¬ì´ë¦„   
 		if(isdigit(Input[0]) != 0)
 		{
 			InputNum=stoi(Input)-1;
 			cout <<Pocketmon[InputNum]<<"\n"; 
 		} 
-		//2.Æ÷ÄÏ¸óÀÌ¸§  >> Æ÷ÄÏ¸ó¼ıÀÚ  
+		//2.í¬ì¼“ëª¬ì´ë¦„  >> í¬ì¼“ëª¬ìˆ«ì  
 		else
 		{
 			auto index = mapset.find(Input);
