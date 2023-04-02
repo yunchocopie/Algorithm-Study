@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdio.h>
 #define endl '\n'
 using namespace std;
 
